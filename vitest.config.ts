@@ -5,6 +5,6 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     testTimeout: 120_000,
-    setupFiles: ['dotenv/config']
+    setupFiles: ['dotenv/config', './tests/setup/shibarium.setup.ts']
   }
 });

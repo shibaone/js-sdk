@@ -1,0 +1,45 @@
+diff --git a/node_modules/@iden3/js-iden3-core/src/constants.ts b/node_modules/@iden3/js-iden3-core/src/constants.ts
+index 67ea613..dc82330 100644
+--- a/node_modules/@iden3/js-iden3-core/src/constants.ts
++++ b/node_modules/@iden3/js-iden3-core/src/constants.ts
+@@ -50,7 +50,8 @@ export const Blockchain: { [k: string]: string } = {
+   Linea: 'linea',
+   Unknown: 'unknown',
+   NoChain: '',
+-  ReadOnly: 'readonly'
++  ReadOnly: 'readonly',
++  Shibarium: 'shibarium'
+ };
+ 
+ export const NetworkId: { [k: string]: string } = {
+@@ -63,7 +64,7 @@ export const NetworkId: { [k: string]: string } = {
+   Cardona: 'cardona',
+   Test: 'test',
+   Unknown: 'unknown',
+-  NoNetwork: ''
++  NoNetwork: '',
+ };
+ 
+ export const DidMethod: { [k: string]: string } = {
+@@ -90,7 +91,9 @@ export const ChainIds: { [key: string]: number } = {
+   [`${Blockchain.Linea}:${NetworkId.Main}`]: 59144,
+   [`${Blockchain.Linea}:${NetworkId.Sepolia}`]: 59141,
+   [`${Blockchain.Billions}:${NetworkId.Main}`]: 45056,
+-  [`${Blockchain.Billions}:${NetworkId.Test}`]: 6913
++  [`${Blockchain.Billions}:${NetworkId.Test}`]: 6913,
++  [`${Blockchain.Shibarium}:${NetworkId.Main}`]: 109,
++  [`${Blockchain.Shibarium}:${NetworkId.Test}`]: 157,
+ };
+ 
+ export const DidMethodByte: { [key: string]: number } = {
+@@ -114,7 +117,9 @@ const blockchainNetworkMap = {
+   [`${Blockchain.Linea}:${NetworkId.Main}`]: 0b0100_0000 | 0b0000_1001,
+   [`${Blockchain.Linea}:${NetworkId.Sepolia}`]: 0b0100_0000 | 0b0000_1000,
+   [`${Blockchain.Billions}:${NetworkId.Main}`]: 0b1011_0000 | 0b0000_0001,
+-  [`${Blockchain.Billions}:${NetworkId.Test}`]: 0b1011_0000 | 0b0000_0010
++  [`${Blockchain.Billions}:${NetworkId.Test}`]: 0b1011_0000 | 0b0000_0010,
++  [`${Blockchain.Shibarium}:${NetworkId.Main}`]: 0b1000_0000 | 0b0000_0001,  // 0x81 = 129
++  [`${Blockchain.Shibarium}:${NetworkId.Test}`]: 0b1000_0000 | 0b0000_0010,  // 0x82 = 130
+ };
+ 
+ // DIDMethodNetwork is map for did methods and their blockchain networks
