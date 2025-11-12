@@ -32,6 +32,7 @@
     "format:check": "prettier \"src/**/*.ts\" \"tests/**/*.ts\" --check",
     "demo:did:shibarium": "node --loader ts-node/esm ./src/demo/shibarium-did-demo.ts",
     "test:shibarium": "vitest run -t 'Dynamic DIDs — Shibarium Puppynet'",
+    "generate:verifier-did": "node ./scripts/generate-verifier-did.js",
     "postinstall": "patch-package"
   },
   "repository": {
